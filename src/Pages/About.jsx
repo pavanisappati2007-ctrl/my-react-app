@@ -6,6 +6,7 @@ export default function About() {
         This mini project demonstrates the use of React Router
         for navigation between multiple pages.
       </p>
+ 
       <h3>Features:</h3>
       <ul>
         <li>Home Page</li>

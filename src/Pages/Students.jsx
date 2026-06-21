@@ -1,21 +1,23 @@
-function Students() {
+import { Link } from "react-router-dom";
+
+export default function Students() {
   const students = [
-    { id: 1, name: "Ravi" },
-    { id: 2, name: "Priya" },
-    { id: 3, name: "Kiran" }
+    { id: 1, name: "Teja" },
+    { id: 2, name: "Ravi" },
+    { id: 3, name: "Sita" },
   ];
 
   return (
     <div>
       <h1>Students Page</h1>
 
-      <ul>
-        {students.map((student) => (
-          <li key={student.id}>{student.name}</li>
-        ))}
-      </ul>
+      {students.map((student) => (
+        <div key={student.id}>
+          <Link to={`/students/${student.id}`}>
+            {student.name}
+          </Link>
+        </div>
+      ))}
     </div>
   );
 }
-
-export default Students;
